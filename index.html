@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube 影片展示牆</title>
+    <style>
+        /* 基本樣式設定 */
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* 影片網格佈局 */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* 影片卡片樣式 */
+        .video-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 縮圖容器 */
+        .thumbnail-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 影片標題樣式 */
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: #222;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #ff0000;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>影片專案展示</h1>
+
+    <div class="video-grid">
+        
+        <a href="https://www.youtube.com/watch?v=zPYrhNj8Ui8" target="_blank" class="video-card">
+            <div class="thumbnail-container">
+                <img src="https://img.youtube.com/vi/zPYrhNj8Ui8/hqdefault.jpg" alt="影片縮圖">
+            </div>
+            <div class="video-info">
+                <span class="tag">精選影片</span>
+                <h3>影片專案 A</h3>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=7l3bevv22pM" target="_blank" class="video-card">
+            <div class="thumbnail-container">
+                <img src="https://img.youtube.com/vi/7l3bevv22pM/hqdefault.jpg" alt="影片縮圖">
+            </div>
+            <div class="video-info">
+                <span class="tag">精選影片</span>
+                <h3>影片專案 B</h3>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=9Lt0LWfUtSc" target="_blank" class="video-card">
+            <div class="thumbnail-container">
+                <img src="https://img.youtube.com/vi/9Lt0LWfUtSc/hqdefault.jpg" alt="影片縮圖">
+            </div>
+            <div class="video-info">
+                <span class="tag">第7屆</span>
+                <h3>第七屆 活動紀錄/作品</h3>
+            </div>
+        </a>
+
+        <a href="https://youtu.be/lTwZaVfgH-I" target="_blank" class="video-card">
+            <div class="thumbnail-container">
+                <img src="https://img.youtube.com/vi/lTwZaVfgH-I/hqdefault.jpg" alt="影片縮圖">
+            </div>
+            <div class="video-info">
+                <span class="tag">第8屆</span>
+                <h3>第八屆 活動紀錄/作品</h3>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>
